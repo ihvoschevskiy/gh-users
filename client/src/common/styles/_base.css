@@ -1,0 +1,36 @@
+*:not(svg *) {
+  all: unset;
+  display: revert;
+}
+
+svg {
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  cursor: pointer;
+}
+
+/* FIX: change default font settings */
+body {
+  max-width: var(--b-body-width);
+  height: 100vh;
+  margin: 0 auto;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  grid-column: 2/-2;
+  justify-content: space-between;
+  height: 100vh;
+}

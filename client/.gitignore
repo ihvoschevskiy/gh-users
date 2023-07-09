@@ -1,0 +1,29 @@
+# конфигурационные файлы редакторов кода
+
+.idea/
+
+# служебные файлы git
+
+*.patch
+*.bundle
+
+# личные вспомогательные файлы
+
+.pperfect/
+
+*.diff
+*.todo
+
+# переменные окружения
+
+.env
+.env.test
+
+# зависимости и сборки
+
+build/
+node_modules/
+
+# cypress
+
+cypress/videos/

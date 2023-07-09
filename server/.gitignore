@@ -1,0 +1,29 @@
+# конфигурационные файлы редакторов кода
+
+.idea/
+
+# служебные файлы git
+
+*.patch
+*.bundle
+
+# личные вспомогательные файлы
+
+*.diff
+*.todo
+
+# переменные окружения
+
+.env
+.env.test
+
+# зависимости и сборки
+
+build/
+node_modules/
+
+# prisma: базы данных и служебные файлы
+
+prisma/migrations/
+prisma/*.db
+prisma/*.db-journal

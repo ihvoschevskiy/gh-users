@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "jsx": "react",
+    "lib": ["dom", "dom.iterable", "es2018", "webworker"],
+    "module": "ES2020",
+    "moduleResolution": "node",
+    "outDir": "./build",
+    "paths": {
+      "@assets/*": ["./src/assets/*"],
+      "@common/*": ["./src/common/*"],
+      "@components/*": ["./src/blocks/components/*"],
+      "@features/*": ["./src/blocks/features/*"],
+      "@layouts/*": ["./src/blocks/layouts/*"],
+      "@data/*": ["./src/data/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@types/*": ["./src/types/*"]
+    },
+    "removeComments": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "strict": true,
+    "types": ["jest"]
+  },
+  "exclude": ["build", "node_modules"],
+  "include": ["./jest.setup.ts", "src"]
+}

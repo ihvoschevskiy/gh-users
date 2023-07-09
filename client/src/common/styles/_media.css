@@ -1,0 +1,2 @@
+@custom-media --xxl (1920px <= width);
+@custom-media --xl (1440px <= width < 1920px);

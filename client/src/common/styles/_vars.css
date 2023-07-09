@@ -1,0 +1,24 @@
+:root {
+  /* colors  */
+
+  /* grid */
+  --g-columns: 16;
+  --g-column-width: 101.25px;
+  --g-gap: 20px;
+
+  /* boundaries */
+  --b-body-width: calc(var(--g-columns) * var(--g-column-width) + (var(--g-columns) -1) * var(--g-gap));
+  --b-container-padding: 20px;
+}
+
+[scheme='dark'] {
+  --c-fg: #fff;
+  --c-bg: #262a2f;
+  --c-accent: #fa8072;
+}
+
+[scheme='light'] {
+  --c-fg: #4f4f4f;
+  --c-bg: #fff;
+  --c-accent: #f35151;
+}

@@ -1,0 +1,33 @@
+{
+  "name": "gh_users",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "Igor` Hvoschevskiy",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build --prefix server && npm run build --prefix client && npm run cp",
+    "client": "npm start --prefix client",
+    "cp": "rm -rf ./build && mkdir -p ./build/static ./build && cp -r ./client/build/. ./build/static && cp -r ./server/build/. ./build",
+    "lint": "eslint ./ --ext .ts,.tsx,.js,.jsx && stylelint -c ./client/.stylelintrc \"./**/*.?(s)css\" --ip \"**/build\"",
+    "prettier": "prettier --write ./",
+    "prettier:check": "prettier --check ./",
+    "server": "npm run start --prefix server",
+    "setup": "npm i && npm i --prefix client && npm i --prefix server",
+    "start": "npm run client & npm run server"
+  },
+  "pre-commit": [
+    "lint",
+    "prettier:check"
+  ],
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "eslint": "^8.44.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^3.0.0",
+    "stylelint": "^15.10.1"
+  }
+}
