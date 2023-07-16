@@ -1,0 +1,46 @@
+.locale-switcher-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  padding: 6px 50px 6px 12px;
+
+  &__option {
+    color: var(--c-bg);
+    cursor: pointer;
+    border-bottom: 2px solid var(--c-fg);
+
+    &--active {
+      color: var(--c-accent);
+      cursor: pointer;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__option:focus {
+    border-bottom: 2px solid var(--c-fg);
+    outline: none;
+  }
+
+  &__option:focus-visible {
+    border-bottom: 2px solid var(--c-accent);
+    outline: none;
+  }
+
+  &__option:focus:not(:focus-visible) {
+    border-bottom: 2px solid var(--c-fg);
+    outline: none;
+  }
+
+  &__text {
+    padding: 0 16px 0 2px;
+    font-family: RobotoMono, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-transform: capitalize;
+  }
+}
