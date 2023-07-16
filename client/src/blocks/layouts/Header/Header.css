@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 0 80px;
+
+  &__controls {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.navigation {
+  &__link {
+    font-family: Rubik, sans-serif;
+    font-size: 16px;
+    color: var(--c-accent);
+    text-transform: uppercase;
+  }
+
+  &__caption {
+    font-family: RobotoMono, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    color: var(--c-accent);
+    text-transform: lowercase;
+  }
+}
