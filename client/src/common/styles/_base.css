@@ -1,36 +1,66 @@
+@import url('./_vars.css');
+@import url('./_fonts.css');
+@import url('./_media.css');
+
 *:not(svg *) {
   all: unset;
   display: revert;
+}
+
+*:focus-visible {
+  margin-bottom: -2px;
+  border-bottom: 2px solid var(--c-fg);
 }
 
 svg {
   display: block;
 }
 
-li {
-  list-style: none;
-}
-
 a {
   cursor: pointer;
 }
 
-/* FIX: change default font settings */
+h1 {
+  margin-bottom: 72px;
+  font-family: Rubik, sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--c-fg);
+  text-transform: uppercase;
+}
+
+li {
+  list-style: none;
+}
+
 body {
   max-width: var(--b-body-width);
   height: 100vh;
   margin: 0 auto;
-  font-family: sans-serif;
+  overflow: auto;
+  font-family: RobotoMono, sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 26px;
+  color: var(--c-fg);
+  background-color: var(--c-bg);
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--g-columns), var(--g-column-width));
+  gap: var(--g-gap);
 }
 
 .container {
   position: relative;
   display: flex;
   flex-direction: column;
-  grid-column: 2/-2;
-  justify-content: space-between;
-  height: 100vh;
+  grid-column: 3/-3;
+  justify-content: start;
 }

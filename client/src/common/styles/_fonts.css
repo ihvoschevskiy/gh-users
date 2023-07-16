@@ -1,10 +1,27 @@
-/* FIX: add font families */
-
-/* 
 @font-face {
-  font-family: ;
+  font-family: Formular;
   font-style: normal;
-  font-weight: 300;
-  src: url('~fonts/') format('woff2');
+  font-weight: 700;
+  src: url('~@assets/fonts/Formular-Bold.woff2') format('woff2');
 }
-*/
+
+@font-face {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 700;
+  src: url('~@assets/fonts/Rubik-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: RobotoMono;
+  font-style: normal;
+  font-weight: 600;
+  src: url('~@assets/fonts/RobotoMono-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: RobotoMono;
+  font-style: normal;
+  font-weight: 500;
+  src: url('~@assets/fonts/RobotoMono-Medium.woff2') format('woff2');
+}

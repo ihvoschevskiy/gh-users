@@ -3,7 +3,7 @@
 
   /* grid */
   --g-columns: 16;
-  --g-column-width: 101.25px;
+  --g-column-width: 71.25px;
   --g-gap: 20px;
 
   /* boundaries */
@@ -12,13 +12,14 @@
 }
 
 [scheme='dark'] {
-  --c-fg: #fff;
+  --c-fg: #e5e5e5;
+  --c-fg-secondary: #8a8a8a;
   --c-bg: #262a2f;
-  --c-accent: #fa8072;
+  --c-accent: #f53;
 }
 
 [scheme='light'] {
-  --c-fg: #4f4f4f;
-  --c-bg: #fff;
-  --c-accent: #f35151;
+  --c-fg: #262a2f;
+  --c-bg: #e5e5e5;
+  --c-accent: #f53;
 }
