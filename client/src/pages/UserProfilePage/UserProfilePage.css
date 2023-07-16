@@ -1,0 +1,35 @@
+.repositories {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px 0 20px;
+  }
+
+  &__title {
+    font-family: Rubik, sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--c-fg);
+    text-transform: uppercase;
+  }
+
+  &__link {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: normal;
+    color: var(--c-accent);
+    text-decoration-line: underline;
+
+    &:focus-visible {
+      text-decoration-line: none;
+    }
+  }
+}
+
+.repositories-list-wr {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 40px;
+}
