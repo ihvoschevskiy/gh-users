@@ -1,0 +1,42 @@
+.form-wr {
+  margin-left: 30px;
+}
+
+.form {
+  display: flex;
+
+  &__input {
+    min-width: 232px;
+    padding: 10px 13px 6px;
+    margin-right: 12px;
+    font-family: RobotoMono, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--c-fg-secondary);
+    background-color: var(--c-fg);
+    border-radius: 8px;
+
+    &:focus-visible {
+      outline: 2px solid var(--c-accent);
+    }
+  }
+
+  &__button {
+    min-width: 70px;
+    padding: 8px 13px;
+    font-family: Rubik, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: var(--c-accent);
+    border-radius: 8px;
+
+    &:focus-visible {
+      margin-bottom: 0;
+      border-bottom: none;
+      outline: 2px solid var(--c-fg);
+    }
+  }
+}
