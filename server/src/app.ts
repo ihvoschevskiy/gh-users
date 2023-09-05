@@ -10,17 +10,18 @@ export const app: Express = express()
 app.use(
   cors({
     origin:
-      process.env.NODE_ENV === 'producton'
+      process.env.NODE_ENV === 'production'
         ? [process.env.PROD_HOST as string]
-        : ['http://localhost:3000'],
+        : [process.env.DEV_ORIGIN as string],
   }),
 )
 app.use(express.json())
 app.use(express.static(path.join(__dirname, 'static')))
 app.use('/api', router)
-app.use('/*', (req, res) => {
+app.use('/*', (_, res) => {
   res.sendFile(path.join(__dirname, 'static', 'index.html'))
 })
+
 app.use(
   (err: NodeJS.ErrnoException | AxiosError, req: Request, res: Response, next: NextFunction) => {
     if (err instanceof AxiosError) {

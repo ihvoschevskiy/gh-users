@@ -10,7 +10,7 @@ module.exports = {
     main: './src/index.ts',
   },
   output: {
-    filename: '[name].[contenthash].js',
+    filename: '[name].js',
     path: CONSTANTS.BUILD_DIRECTORY,
     clean: true,
   },

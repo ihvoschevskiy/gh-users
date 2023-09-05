@@ -4,11 +4,11 @@ import * as T from './github.api.types'
 export const getUsers = async (query?: string): Promise<T.IUserListApi[]> => {
   return query
     ? await fetchWrapper<AxiosResponse>(
-        `https://api.github.com/search/users?q=${query}&per_page=30`,
+        `https://api.github.com/search/users?q=${query}&per_page=15`,
       )
         .then(response => response.data)
         .then(response => response.items)
-    : await fetchWrapper<AxiosResponse>('https://api.github.com/users?per_page=30').then(
+    : await fetchWrapper<AxiosResponse>('https://api.github.com/users?per_page=15').then(
         response => response.data,
       )
 }
@@ -43,7 +43,7 @@ export const getFirstOrganizationName = async (orgsUrl: string): Promise<string>
 
 export const getRepositories = async (id: string): Promise<T.IRepositoryAPI[]> => {
   return await fetchWrapper<AxiosResponse>(
-    `https://api.github.com/users/${id}/repos?sort=pushed`,
+    `https://api.github.com/users/${id}/repos?sort=pushed&per_page=10`,
   ).then(response => response.data)
 }
 

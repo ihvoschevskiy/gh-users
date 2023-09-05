@@ -27,6 +27,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "gh_users": "file:..",
     "tslog": "^4.8.2"
   },
   "devDependencies": {

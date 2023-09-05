@@ -11,6 +11,7 @@
     "client": "npm start --prefix client",
     "cp": "rm -rf ./build && mkdir -p ./build/static ./build && cp -r ./client/build/. ./build/static && cp -r ./server/build/. ./build",
     "lint": "eslint ./ --ext .ts,.tsx,.js,.jsx && stylelint -c ./client/.stylelintrc \"./**/*.?(s)css\" --ip \"**/build\"",
+    "lint:prod": "NODE_ENV=production eslint ./ --ext .ts,.tsx,.js,.jsx && stylelint -c ./client/.stylelintrc \"./**/*.?(s)css\" --ip \"**/build\"",
     "prettier": "prettier --write ./",
     "prettier:check": "prettier --check ./",
     "server": "npm run start --prefix server",
@@ -25,9 +26,15 @@
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "eslint": "^8.44.0",
     "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "pre-commit": "^1.2.2",
     "prettier": "^3.0.0",
-    "stylelint": "^15.10.1"
+    "stylelint": "^15.10.1",
+    "stylelint-config-recess-order": "^4.3.0",
+    "stylelint-config-standard": "^34.0.0"
+  },
+  "dependencies": {
+    "tslog": "^4.9.2"
   }
 }

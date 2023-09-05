@@ -1,7 +1,10 @@
 import { IRepository, IUser } from '../../types/api.types'
 
 const MODE = process.env.NODE_ENV
-const API_ROUTE = MODE === 'production' ? process.env.PROD_API_ROUTE : process.env.DEV_API_ROUTE
+const API_ROUTE =
+  MODE === 'production'
+    ? `${process.env.PROD_HOST}:${process.env.PORT}${process.env.ROUTE}`
+    : `${process.env.DEV_HOST}:${process.env.PORT}${process.env.ROUTE}`
 
 export const getUsers = async (query?: string): Promise<IUser[]> => {
   return query ? await fetchWrapper(`${API_ROUTE}/search/users?q=${query}`) : await fetchWrapper(`${API_ROUTE}/users`)
