@@ -21,7 +21,7 @@ jobs:
       - run: npm run lint:prod
       - run: npm run prettier:check
   get_files_for_frontend:
-    name: получение данных для корректной работы frontend'а
+    name: получение frontend dot files
     needs: code_quality_checking
     environment: testing
     runs-on: ubuntu-20.04
@@ -36,7 +36,7 @@ jobs:
           path: |
             .env
   get_files_for_backend:
-    name: получение данных для корректной работы backend'а
+    name: получение backend dot files
     needs: code_quality_checking
     environment: testing
     runs-on: ubuntu-20.04

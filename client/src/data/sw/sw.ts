@@ -19,7 +19,11 @@ sw.addEventListener('activate', e => {
 sw.addEventListener('fetch', e => {
   if (e.request.url.startsWith('http') && e.request.method === 'GET') {
     const isHtml = e.request.headers.get('Accept')?.indexOf('text/html') !== -1 && e.request.url.startsWith(sw.origin)
-    const isApiRequest = e.request.url.startsWith('http://localhost:3001')
+    const host =
+      process.env.NODE_ENV === 'production'
+        ? `${process.env.PROD_HOST}:${process.env.PORT}`
+        : `${process.env.DEV_HOST}:${process.env.PORT}`
+    const isApiRequest = e.request.url.startsWith(host)
 
     e.respondWith(
       (async () => {
